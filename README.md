@@ -1,5 +1,5 @@
 The paper [Iterative Student Program Planning using
-Transformer-Driven Feedback](https://cs.brown.edu/~sk/Publications/Papers/Published/rsfk-planning-w-gpt-feedback/paper.pdf) describes a negative opinion:
+Transformer-Driven Feedback](https://cs.brown.edu/~sk/Publications/Papers/Published/rsfk-planning-w-gpt-feedback/paper.pdf) highlights an area of improvement:
 `Testing is not enough - Students wanted high-level feedback about their plans, not just testing results`. This repository is an attempt to extend the work done by the authors of the paper to accommodate high-level feedback on students' plans.
 
 - [Extended Workflow](#extended-workflow)
