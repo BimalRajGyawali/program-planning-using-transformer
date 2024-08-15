@@ -19,7 +19,7 @@ Transformer-Driven Feedback](https://cs.brown.edu/~sk/Publications/Papers/Publis
 
 ### Why testing is not enough
 
-LLM can mark the plan as failed even though the plan is correct due to various reasons, one of which is return types. Students might not explicitly define return types as they might not be familiar to coding, or might describe the plan in plain high level english. Due to which LLM might confuse/generate return types on its own.
+A correct plan can still fail a unit test because the LLM might generate incorrect code, particularly with return types.
 
 For example: 
 
@@ -29,13 +29,15 @@ LLM generated code: `return "cancelled reservation"`
 
 Expected Unit Test: `return False`
 
+So, it would be very useful for students to understand why their plan failed, rather than just seeing that the unit test failed (as mentioned in the paper).
+
 <br>
 
-### Providing high-level feedback on a plan using LLMs is challenging
+### But, providing high-level feedback on a plan using LLMs is challenging
+Because:
 
-So, it would be very useful if students knew the reason why the plain failed instead of knowing only unit test failed. [The paper also mentions this]. But it is challenging due to:
-1. LLMs are non-deterministic and we cannot absolutely control what they generate.
-2. To give a plan specific feedback, LLM should have the knowledge of task. But it risks in LLM generating the code from the plan due to (Point 1).
+1. LLMs are non-deterministic, so we can't fully control what they generate.
+2. To provide plan-specific feedback, the LLM needs to understand the task, but this could lead to the LLM generating code from the plan instead.
 
 <br>
 
